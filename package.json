@@ -4,7 +4,7 @@
   "description": "website where pro's search for job openings",
   "main": "jobfinder.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev":"nodemon jobfinder.js"
   },
   "author": "\"Giovani da Silva giovanisilva24@gmail.com\"",
   "license": "ISC",
