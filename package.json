@@ -1,0 +1,21 @@
+{
+  "name": "job-finder",
+  "version": "1.0.0",
+  "description": "website where pro's search for job openings",
+  "main": "jobfinder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Giovani da Silva giovanisilva24@gmail.com\"",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "sequelize": "^6.3.3",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
