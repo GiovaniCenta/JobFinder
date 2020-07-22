@@ -3,7 +3,7 @@
 const express = require('express'); //create express interface
 const app = express();
 const db = require('./db/connection'); //do the connection with the sqlite database
-
+const bodyParser = require('body-parser');
 const PORT = 3000;
 //===========================================================================
 
@@ -11,6 +11,11 @@ const PORT = 3000;
 app.listen(PORT, function() {
     console.log("Express is running in port : " + PORT);
 });
+
+//body parser
+app.use(
+    bodyParser.urlencoded({extend:false})
+);
 
 //db connection
 db.authenticate().then(() => {
@@ -23,3 +28,6 @@ db.authenticate().then(() => {
 app.get('/',(req,res) => {   //send a mensage if everything is ok
     res.send("OK3");
 });
+
+//jobs routes
+app.use('/jobs',require('./routes/jobs'));//calling jobs routes to the main
